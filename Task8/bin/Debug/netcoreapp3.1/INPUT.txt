@@ -1,0 +1,66 @@
+private void FindChain(int firstV, int endV, int[] visit, string resultChain, int K)
+        {
+            //firstV - начальная вершина
+            //endV - конечная вершина
+            //visit - массив, в котором хранится информация о посещении вершины
+            //resultChain - рекурсивно собирающаяся цепочка
+            //K - неоьходимое кол-во вершин в цепи
+
+            //не достигли конца обхода
+            //вершину не перекрашивать, если первая вершина = последней вершине (возможно в ней есть несколько путей)
+            if (firstV != endV)
+                visit[firstV] = 1;
+            else
+            {
+                if (resultChain.Split("-").Length == K)               
+                    chain = resultChain;
+                return;       
+            }
+
+            //обход всех ребер данной вершины
+            for (int i = 0; i < Edges.Count; i++)
+            {
+                //если найдена цепь можно выходить из рекурсии
+                if (chain.Split("-").Length == K)
+                    break;
+
+                //если входящую вершину ребра не посещали и она - начальная
+                if (visit[Edges[i].To.Number] == 0 && Edges[i].To.Number == firstV)
+                {
+                    FindChain(Edges[i].To.Number, endV, visit, resultChain + "-" + (Edges[i].To.Number).ToString(), K);
+                    visit[Edges[i].To.Number] = 0;
+                }
+
+                //если исходящую вершину ребра не посещали и она - начальная
+                else if (visit[Edges[i].From.Number] == 0 && Edges[i].To.Number == firstV)
+                {
+                    FindChain(Edges[i].From.Number, endV, visit, resultChain + "-" + (Edges[i].From.Number).ToString(), K);
+                    visit[Edges[i].From.Number] = 0;
+                }
+            }
+        }
+
+        public string chain = new string("");
+
+        public string chainsSearch(int K)
+        {
+            int[] visit = new int[Vertexes.Count];      //если вершину проходили, то ее значение = 1, иначе 0
+           
+            //для перебора первоначальных вершин
+            for (int i = 1; i <= Vertexes.Count; i++)
+
+                //для перебора конечных вершин
+                for (int j = i+1; j <= Vertexes.Count; j++)
+                {
+                    //все вершины первоначально имеют значение 0,
+                    for (int n = 0; n < Vertexes.Count; n++)
+                        visit[n] = 0;
+
+                    chain = "";
+                    FindChain(i, j, visit, (i).ToString(), K);
+                    
+                    if (chain.Split('-').Length == K)
+                        return chain;
+                }
+            return null;
+        }

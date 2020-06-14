@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Task10/1.0.0": {
+        "dependencies": {
+          "ReadNumbers": "1.0.0"
+        },
+        "runtime": {
+          "Task10.dll": {}
+        }
+      },
+      "ReadNumbers/1.0.0": {
+        "runtime": {
+          "ReadNumbers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Task10/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ReadNumbers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

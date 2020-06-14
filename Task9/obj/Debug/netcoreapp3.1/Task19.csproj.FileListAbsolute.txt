@@ -1,0 +1,16 @@
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.exe
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.deps.json
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.runtimeconfig.json
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.dll
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\Task19.pdb
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\ReadNumbers.dll
+C:\Users\Lenovo\source\repos\practica\Task19\bin\Debug\netcoreapp3.1\ReadNumbers.pdb
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.dll
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.pdb
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.genruntimeconfig.cache
+C:\Users\Lenovo\source\repos\practica\Task19\obj\Debug\netcoreapp3.1\Task19.csprojAssemblyReference.cache

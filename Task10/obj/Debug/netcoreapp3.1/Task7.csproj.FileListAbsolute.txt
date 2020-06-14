@@ -1,0 +1,16 @@
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.exe
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.deps.json
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.runtimeconfig.json
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.runtimeconfig.dev.json
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.dll
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\Task7.pdb
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\ReadNumbers.dll
+C:\Users\Lenovo\source\repos\practica\Task7\bin\Debug\netcoreapp3.1\ReadNumbers.pdb
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.dll
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.pdb
+C:\Users\Lenovo\source\repos\practica\Task7\obj\Debug\netcoreapp3.1\Task7.genruntimeconfig.cache
