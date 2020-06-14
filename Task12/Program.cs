@@ -70,17 +70,15 @@ namespace Task12
             bool ok = false;
             while (p != null && !ok)
             {
-                
-
                 r = p;
                 if (d.CompareTo(p.data) == 0)
                 {
                     ok = true;
                     compares++;
                 }
-                else if (d.CompareTo(p.data) < 0) p = p.left;
+                else if  (d.CompareTo(p.data) < 0) {p = p.left; compares += 2; }
 
-                else { p = p.right; compares+=2; }
+                else { p = p.right; compares += 2; }
                 }
             if (ok) return;
             Point NewPoint = new Point(d);
@@ -96,16 +94,11 @@ namespace Task12
 
         }                          
 
-        public static List<int> elements = null;
+        public static List<int> elements = new List<int>();
                 
         //преобразование дерева в отсортированный массив
         public static void Transform(Point p)
         {
-            if (elements == null)
-            {
-                elements = new List<int>();
-            }
-
             if (p.left != null)
             {
                 Transform(p.left);
@@ -121,22 +114,29 @@ namespace Task12
         public int[] SortByTree()
         {
             Transform(root);
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Write("Двоичное дерево поиска       |    ");
+            Console.Write($"Количество пересылок: {elements.Count};     Количество сравнений:{compares}");
+            Console.ForegroundColor = ConsoleColor.White;
+            compares = 0;
+            elements = new List<int>();
             return elements.ToArray();
         }
-
-
     }
 
     class Program
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.White;
             Random rnd = new Random();
-            int n = ReadNumber.ReadIntNumber(0,10000,"Введите количество элементов в массиве: ");
-            
-            int[] arr1 = new int[n]; 
-            int[] result_arr1 = new int[n];
-
+            Console.WriteLine("Данная программа сортирует массивы двумя способами и подсчитывает количество пересылок и сравнений");
+            int n = ReadNumber.ReadIntNumber(0,1000, "Введите количество элементов для массивов: ");
+            Console.WriteLine("\n");
+            int[] sortToMaxArr = new int[n];
+            int[] sortToMinArr = new int[n];
+            int[] notSortArr = new int[n];
             int a = 0;
             
             for (int i = 0; i < n; i++)
@@ -144,25 +144,34 @@ namespace Task12
                 do
                 {
                     a = rnd.Next(-n, n);
-                } while (arr1.Contains(a));
-                
-                arr1[i] = a;
-               
+                } while (notSortArr.Contains(a));
+
+                notSortArr[i] = a;
+                sortToMaxArr[i] = i;
+                sortToMinArr[i] = n-i;
             }
 
-            TreeNode tree = new TreeNode(arr1);
-            result_arr1 = tree.SortByTree();
-            Console.WriteLine("Количество сравнений для создания двоичного дерева " + tree.compares);
-            PrintArr(result_arr1);
-            
-            
-            SelectionSort(arr1);
-            PrintArr(arr1);
+        
+            Results(notSortArr, "Неотсортированный массив");
+            Results(sortToMaxArr, "Возрастающий массив");
+            Results(sortToMinArr, "Убывающий массив");
         }
 
-       
+        public static void Results(int[] arr, string message)
+        {
+            Console.WriteLine($"{message}\n");
+            Console.Write($"массив: "); PrintArr(arr);
+            Console.WriteLine();
+            TreeNode tree = new TreeNode(arr);
+            tree.SortByTree();
+            Console.WriteLine();
+            SelectionSort(arr);
+            Console.WriteLine("\n");
+        }
+
         public static void SelectionSort(int[] arr)
         {
+            int countCompares = 0;
             int count = 0;
             int min, temp;
             int length = arr.Length;
@@ -173,12 +182,13 @@ namespace Task12
 
                 for (int j = i + 1; j < length; j++)
                 {
+                    countCompares++;
                     if (arr[j] < arr[min])
                     {
                         min = j;
                     }
                 }
-
+                countCompares++;
                 if (min != i)
                 {
                     count++;
@@ -187,8 +197,11 @@ namespace Task12
                     arr[min] = temp;
                 }
             }
-            
-            Console.WriteLine($"Количество перестановок, используя сортировку простым выбором, равно {count}");
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("Сортировка простым выбором   |    ");
+            Console.Write($"Количество пересылок: {count};     Количество сравнений:{countCompares}");
+            Console.ForegroundColor = ConsoleColor.White;
         }
         public static void PrintArr(int[] arr)
         {
