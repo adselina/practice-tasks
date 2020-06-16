@@ -6,8 +6,10 @@ namespace practica
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите размерность матрицы");
             short n = Convert.ToInt16(Console.ReadLine());
 
+            Console.WriteLine("Введите построчно значения матрицы, разделяя их пробелом");
             sbyte[,] matrix = new sbyte[n, n];
             for (int i = 0; i < n; i++)
             {
@@ -107,7 +109,11 @@ namespace practica
                     }
                 }
             }
+
+            Console.Write("Наибольшая сумма трех чисел находящихся рядом: ");
             Console.WriteLine(max);
+
+            Console.ReadKey();
         }
     }
 }

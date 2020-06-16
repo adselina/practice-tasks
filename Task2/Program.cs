@@ -7,6 +7,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Введите строку символов");
             string text = Console.ReadLine();
             text.Trim(' ');
             char[] p = text.ToCharArray();
@@ -40,7 +41,11 @@ namespace Task2
                 newText = newText.Trim(ch);
                 Count = 0; 
             }
+
+            Console.WriteLine("Количество возможный слов из данных символов");
             Console.WriteLine(result);
+
+            Console.ReadKey();
         }
     }
 }

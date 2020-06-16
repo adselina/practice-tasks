@@ -96,8 +96,14 @@ namespace Task10
 
                 current.next = previous;
                 begin = current;
+
+                Console.WriteLine("Список был перевернут");
             }
-            Console.WriteLine("Список был перевернут");
+            else
+            {
+                Console.WriteLine("Последовательность неубывающая. Список не перевернут");
+            }
+            
         }
 
         //печать

@@ -155,6 +155,8 @@ namespace Task12
             Results(notSortArr, "Неотсортированный массив");
             Results(sortToMaxArr, "Возрастающий массив");
             Results(sortToMinArr, "Убывающий массив");
+
+            Console.ReadKey();
         }
 
         public static void Results(int[] arr, string message)
